@@ -6,3 +6,12 @@ export const fetchPeople = (state, action) => {
       return state
   }
 }
+
+export const fetchPerson = (state, action) => {
+  return {
+    statuses: {
+      ...state.statuses,
+      [action.payload.id]: action.status
+    }
+  }
+}

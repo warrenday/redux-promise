@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import App from './App'
-import { actions as appActions } from '../../store/app'
+import { actions as appActions } from '../../store/appClean'
 
 class AppContainer extends React.Component {
   componentDidMount() {

@@ -3,12 +3,14 @@
 A basic example app showing how you can reduce boilerplate of your redux logic by using a middleware which can handle promises.
 
 ```npm i```
+
 ```npm start```
 
 ## The redux logic has been implemented twice.
 
 ### Traditional
 src/store/appTraditional
+
 Logic showing how to handle your redux logic in the more traditional way
 
 ### Promise

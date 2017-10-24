@@ -5,10 +5,13 @@ import {
 
 import * as peopleService from './service'
 
-export const fetchPeople = () => ({
-  type: FETCH_PEOPLE,
-  promise: peopleService.fetchPeople
-})
+// Middleware can still work with thunks
+export const fetchPeople = () => (dispatch) => (
+  dispatch({
+    type: FETCH_PEOPLE,
+    promise: peopleService.fetchPeople
+  })
+)
 
 export const fetchPerson = (id) => ({
   type: FETCH_PERSON,

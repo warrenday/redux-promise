@@ -1,3 +1,5 @@
+// Update the store based on the current status of a
+// promise
 export const fetchPeople = (state, action) => {
   switch (action.status) {
     case 'SUCCESS':

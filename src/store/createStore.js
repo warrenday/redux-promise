@@ -2,7 +2,7 @@ import { createStore, applyMiddleware, combineReducers, compose } from 'redux'
 import thunk from 'redux-thunk'
 
 // Import stores
-import { store as app } from './appClean'
+import { store as app } from './appPromise'
 
 // Import middlewares 
 import promiseMiddleware from './middleware/redux-promise'

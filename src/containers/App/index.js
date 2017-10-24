@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import App from './App'
-import { actions as appActions } from '../../store/appClean'
+import { actions as appActions } from '../../store/appPromise'
 
 class AppContainer extends React.Component {
   componentDidMount() {
@@ -21,10 +21,15 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchPeople() {
-    dispatch(appActions.fetchPeople())
+    // When dispatching the promise is returned
+    dispatch(appActions.fetchPeople()).then(() => {
+      console.log('data fetched and promise returned from thunk :)')
+    })
   },
   onPersonClick(id) {
-    dispatch(appActions.fetchPerson(id))
+    dispatch(appActions.fetchPerson(id)).then(() => {
+      console.log('data fetched and promise returned')
+    })
   }
 })
 
